@@ -5,7 +5,7 @@
 - Installation of ```sqlmap``` on Mac Terminal using the command ```brew install sqlmap```.
 - Changed MacOS terminal from ```zsh``` to ```bash``` due to issues with ```sqlmap``` on zsh.
 
-Note: Screenshots At bottom.
+Note: Screenshots attached bottom.
 
 ## Steps Performed for SQL Injection Attack 🪜
 1. Open website ```vulnweb.com``` and proceed to Acuart sub domain ```http://vulnweb.com```.
@@ -33,7 +33,7 @@ With this we have successfully carried out our SQL Injection Attack resulting in
 ## Command #1
 <img width="815" alt="Screen Shot 2022-10-28 at 8 03 52 PM" src="https://user-images.githubusercontent.com/66818162/198666738-7d5b9820-f761-44c3-86be-7ad9b527bb95.png">
 
-## Comand #2
+## Command #2
 <img width="920" alt="Screen Shot 2022-10-28 at 8 07 04 PM" src="https://user-images.githubusercontent.com/66818162/198668640-2eb542bf-770f-4d65-ae2f-cf6d694081ed.png">
 
 ## Command #3
