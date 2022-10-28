@@ -30,10 +30,10 @@ With this we have successfully carried out our SQL Injection Attack resulting in
 
 # Screenshots 📸
 
-### Command #1
+## Command #1
 <img width="815" alt="Screen Shot 2022-10-28 at 8 03 52 PM" src="https://user-images.githubusercontent.com/66818162/198666738-7d5b9820-f761-44c3-86be-7ad9b527bb95.png">
 
-### Comand #2
+## Comand #2
 <img width="920" alt="Screen Shot 2022-10-28 at 8 07 04 PM" src="https://user-images.githubusercontent.com/66818162/198668640-2eb542bf-770f-4d65-ae2f-cf6d694081ed.png">
 
 ## Command #3
