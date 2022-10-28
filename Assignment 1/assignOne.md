@@ -1,7 +1,7 @@
 # COMP421-InfoSec Assignment 1
-# Name: Hamza Asaad Roll No: 231450993
+# Hamza Asaad 231450993
 
-## Pre-quisite Steps Taken
+## Pre-Requisite Steps Taken
 - Installation of ```sqlmap``` on Mac Terminal using the command ```brew install sqlmap```.
 - Changed MacOS terminal from ```zsh``` to ```bash``` due to issues with ```sqlmap``` on zsh.
 
