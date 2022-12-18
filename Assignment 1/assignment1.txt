@@ -1,0 +1,7 @@
+COMP421 InfoSec Assignment 1 
+Name: Hamza Asaad
+Roll No: 231450993
+Assignment 1 GitHub Link:
+https://github.com/hamzi15/COMP421-InfoSec-Assignments/blob/main/Assignment%201/assignOne.md
+
+All Screenshots and steps are included in the md file
