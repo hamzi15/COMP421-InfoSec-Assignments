@@ -1,0 +1,36 @@
+hamzaasaad@hamzas-mbp ~ % ndiff scan1.xml scan2.xml
+-Nmap 7.92 scan initiated Tue Jan 17 19:04:51 2023 as: nmap -oX scan1.xml scanme.nmap.org
++Nmap 7.92 scan initiated Tue Jan 17 19:05:08 2023 as: nmap -oX scan2.xml www.google.com
+
+ scanme.nmap.org (45.33.32.156):
+ Host is up.
+ Not shown: 998 closed ports
+ PORT      STATE    SERVICE    VERSION
+ 22/tcp    open     ssh
+ 25/tcp    filtered smtp
+ 80/tcp    open     http
+ 646/tcp   filtered ldp
+ 1900/tcp  filtered upnp
+ 9929/tcp  open     nping-echo
+ 31337/tcp open     Elite
+
+hamzaasaad@hamzas-mbp ~ % ndiff -v scan1.xml scan2.xml
+-Nmap 7.92 scan initiated Tue Jan 17 19:06:51 2023 as: nmap -oX scan1.xml scanme.nmap.org
++Nmap 7.92 scan initiated Tue Jan 17 19:07:08 2023 as: nmap -oX scan2.xml www.google.com
+
+ scanme.nmap.org (45.33.32.156):
+ Host is up.
+ Not shown: 993 closed ports
+ PORT      STATE    SERVICE    VERSION
+ 22/tcp    open     ssh
+ 25/tcp    filtered smtp
+ 80/tcp    open     http
+ 646/tcp   filtered ldp
+ 1900/tcp  filtered upnp
+ 9929/tcp  open     nping-echo
+ 31337/tcp open     Elite
+
+ hamzaasaad@hamzas-mbp ~ % ndiff --xml scan1.xml scan2.xml
+ <?xml version="1.0" encoding="utf-8"?>
+<nmapdiff version="1"><scandiff><a><nmaprun scanner="nmap" args="nmap -oX scan1.xml scanme.nmap.org" start="1673964411" startstr="Tue Jan 17 19:06:51 2023" version="7.92"/>
+</a><b><nmaprun scanner="nmap" args="nmap -oX scan2.xml www.google.com" start="1673964428" startstr="Tue Jan 17 19:07:08 2023" version="7.92"/>

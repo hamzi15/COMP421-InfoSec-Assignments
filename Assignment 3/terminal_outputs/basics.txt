@@ -1,0 +1,61 @@
+Last login: Tue Jan 17 17:49:45 on ttys000
+hamzaasaad@Hamzas-MacBook-Pro ~ % nmap scanme.nmap.org                         
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:11 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.29s latency).
+rDNS record for 45.33.32.156: 156.32.33.45.in-addr.arpa
+Not shown: 995 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+646/tcp   filtered ldp
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+
+Nmap done: 1 IP address (1 host up) scanned in 66.53 seconds
+hamzaasaad@Hamzas-MacBook-Pro ~ % nmap -A scanme.nmap.org
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:14 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.29s latency).
+rDNS record for 45.33.32.156: 156.32.33.45.in-addr.arpa
+Not shown: 994 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE    VERSION
+22/tcp    open     ssh        OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 ac00a01a82ffcc5599dc672b34976b75 (DSA)
+|   2048 203d2d44622ab05a9db5b30514c2a6b2 (RSA)
+|   256 9602bb5e57541c4e452f564c4a24b257 (ECDSA)
+|_  256 33fa910fe0e17b1f6d05a2b0f1544156 (ED25519)
+80/tcp    open     http       Apache httpd 2.4.7 ((Ubuntu))
+|_http-favicon: Nmap Project
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: Go ahead and ScanMe!
+646/tcp   filtered ldp
+1900/tcp  filtered upnp
+9929/tcp  open     nping-echo Nping echo
+31337/tcp open     tcpwrapped
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 85.04 seconds
+hamzaasaad@Hamzas-MacBook-Pro ~ % nmap -6 scanme.nmap.org
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:16 PKT
+Warning: Hostname scanme.nmap.org resolves, but not to any IPv6 address. Try scanning without -6
+Failed to resolve "scanme.nmap.org".
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 0.04 seconds
+
+hamzaasaad@hamzas-mbp ~ % nmap 192.168.10.4/24
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 20:59 PKT
+Stats: 0:00:30 elapsed; 0 hosts completed (0 up), 256 undergoing Ping Scan
+Ping Scan Timing: About 71.19% done; ETC: 21:00 (0:00:13 remaining)
+Stats: 0:00:54 elapsed; 0 hosts completed (0 up), 256 undergoing Ping Scan
+Ping Scan Timing: About 91.21% done; ETC: 21:00 (0:00:05 remaining)
+Stats: 0:01:07 elapsed; 0 hosts completed (0 up), 256 undergoing Ping Scan
+Ping Scan Timing: About 98.63% done; ETC: 21:00 (0:00:01 remaining)
+Stats: 0:01:24 elapsed; 251 hosts completed (5 up), 5 undergoing Connect Scan
+Connect Scan Timing: About 50.42% done; ETC: 21:00 (0:00:13 remaining)
+Stats: 0:01:30 elapsed; 251 hosts completed (5 up), 5 undergoing Connect Scan
+Connect Scan Timing: About 51.76% done; ETC: 21:01 (0:00:19 remaining)
+Stats: 0:01:31 elapsed; 251 hosts completed (5 up), 5 undergoing Connect Scan
+Connect Scan Timing: About 52.01% done; ETC: 21:01 (0:00:19 remaining)

@@ -1,0 +1,72 @@
+Last login: Tue Jan 17 18:12:03 on ttys000
+hamzaasaad@hamzas-mbp ~ % nmap -f scanme.nmap.org
+Sorry, but fragscan requires root privileges.
+QUITTING!
+hamzaasaad@hamzas-mbp ~ % sudo nmap scanme.nmap.org
+Password:
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:13 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.30s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+646/tcp   filtered ldp
+1900/tcp  filtered upnp
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+
+Nmap done: 1 IP address (1 host up) scanned in 6.11 seconds
+hamzaasaad@hamzas-mbp ~ % nmap -spoof-mac 0 scanme.nmap.org 
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:15 PKT
+Spoofing MAC address 80:88:42:AC:5B:C7 (No registered vendor)
+You have specified some options that require raw socket access.
+These options will not be honored without the necessary privileges.
+Stats: 0:00:20 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 27.75% done; ETC: 18:16 (0:00:52 remaining)
+Stats: 0:00:24 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 34.20% done; ETC: 18:16 (0:00:46 remaining)
+Stats: 0:00:58 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 81.98% done; ETC: 18:16 (0:00:13 remaining)
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.29s latency).
+rDNS record for 45.33.32.156: 156.32.33.45.in-addr.arpa
+Not shown: 995 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+646/tcp   filtered ldp
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+
+Nmap done: 1 IP address (1 host up) scanned in 71.58 seconds
+hamzaasaad@hamzas-mbp ~ % sudo nmap -f scanme.nmap.org 
+Password:
+Warning: Packet fragmentation selected on a host other than Linux, OpenBSD, FreeBSD, or NetBSD.  This may or may not work.
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:19 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.30s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+646/tcp   filtered ldp
+1900/tcp  filtered upnp
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+
+Nmap done: 1 IP address (1 host up) scanned in 15.81 seconds
+hamzaasaad@hamzas-mbp ~ % sudo nmap -source-port 53 scanme.nmap.org
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:22 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.30s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+646/tcp   filtered ldp
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+
+Nmap done: 1 IP address (1 host up) scanned in 12.10 seconds
+hamzaasaad@hamzas-mbp ~ % 

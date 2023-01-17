@@ -1,0 +1,58 @@
+Last login: Tue Jan 17 18:23:57 on ttys003
+hamzaasaad@hamzas-mbp ~ % nmap -O scanme.nmap.org
+TCP/IP fingerprinting (for OS scan) requires root privileges.
+QUITTING!
+hamzaasaad@hamzas-mbp ~ % sudo nmap -O scanme.nmap.org
+Password:
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:24 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.29s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+646/tcp   filtered ldp
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+Aggressive OS guesses: Linux 5.0 (91%), Linux 5.4 (91%), Linux 5.0 - 5.4 (91%), HP P2000 G3 NAS device (89%), Linux 4.15 - 5.6 (89%), Linux 5.0 - 5.3 (89%), OpenWrt 12.09-rc1 Attitude Adjustment (Linux 3.3 - 3.7) (89%), Linux 2.6.32 (89%), Infomir MAG-250 set-top box (89%), Netgear RAIDiator 4.2.21 (Linux 2.6.37) (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 20 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.35 seconds
+
+hamzaasaad@hamzas-mbp ~ % sudo nmap -O -osscan-guess scanme.nmap.org
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:27 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.29s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+646/tcp   filtered ldp
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+Aggressive OS guesses: Linux 5.0 (92%), Linux 5.0 - 5.4 (92%), Linux 5.4 (90%), OpenWrt 12.09-rc1 Attitude Adjustment (Linux 3.3 - 3.7) (90%), HP P2000 G3 NAS device (89%), Linux 4.15 - 5.6 (89%), Linux 5.3 - 5.4 (89%), Linux 2.6.32 (89%), Ubiquiti AirMax NanoStation WAP (Linux 2.6.32) (89%), Linux 3.7 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 20 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 12.61 seconds
+
+hamzaasaad@hamzas-mbp ~ % sudo nmap -sV scanme.nmap.org
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:28 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.30s latency).
+rDNS record for 45.33.32.156: 156.32.33.45.in-addr.arpa
+Not shown: 994 closed tcp ports (reset)
+PORT      STATE    SERVICE    VERSION
+22/tcp    open     ssh        OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+80/tcp    open     http       Apache httpd 2.4.7 ((Ubuntu))
+646/tcp   filtered ldp
+1900/tcp  filtered upnp
+9929/tcp  open     nping-echo Nping echo
+31337/tcp open     tcpwrapped
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 20.54 seconds

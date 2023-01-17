@@ -1,0 +1,64 @@
+Last login: Tue Jan 17 17:51:38 on ttys001
+hamzaasaad@hamzas-mbp ~ % nmap -sP scanme.nmap.org
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:12 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.29s latency).
+rDNS record for 45.33.32.156: 156.32.33.45.in-addr.arpa
+Nmap done: 1 IP address (1 host up) scanned in 0.31 seconds
+hamzaasaad@hamzas-mbp ~ % nmap -PN scanme.nmap.org
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:12 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.29s latency).
+rDNS record for 45.33.32.156: 156.32.33.45.in-addr.arpa
+Not shown: 995 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+646/tcp   filtered ldp
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+
+Nmap done: 1 IP address (1 host up) scanned in 67.22 seconds
+hamzaasaad@hamzas-mbp ~ % nmap -traceroute scanme.nmap.org
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:14 PKT
+Traceroute has to be run as root
+QUITTING!
+hamzaasaad@hamzas-mbp ~ % sudo nmap -traceroute scanme.nmap.org
+Password:
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-01-17 18:14 PKT
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.29s latency).
+rDNS record for 45.33.32.156: 156.32.33.45.in-addr.arpa
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE    SERVICE
+22/tcp    open     ssh
+80/tcp    open     http
+646/tcp   filtered ldp
+9929/tcp  open     nping-echo
+31337/tcp open     Elite
+
+TRACEROUTE (using port 1723/tcp)
+HOP RTT       ADDRESS
+1   10.52 ms  broadcom.home (192.168.10.1)
+2   33.04 ms  182.176.0.34
+3   33.08 ms  10.55.3.106 (10.55.3.106)
+4   33.12 ms  10.253.8.36 (10.253.8.36)
+5   48.80 ms  10.253.4.36 (10.253.4.36)
+6   48.84 ms  10.253.4.22 (10.253.4.22)
+7   ...
+8   150.85 ms be3078.ccr32.bio02.atlas.cogentco.com (154.54.56.125)
+9   224.47 ms be2332.ccr42.dca01.atlas.cogentco.com (154.54.85.245)
+10  235.27 ms be2892.ccr22.cle04.atlas.cogentco.com (154.54.82.253)
+11  238.86 ms be2718.ccr42.ord01.atlas.cogentco.com (154.54.7.129)
+12  251.30 ms be2832.ccr22.mci01.atlas.cogentco.com (154.54.44.169)
+13  262.18 ms be3036.ccr22.den01.atlas.cogentco.com (154.54.31.89)
+14  275.06 ms be3038.ccr32.slc01.atlas.cogentco.com (154.54.42.97)
+15  286.82 ms be3110.ccr22.sfo01.atlas.cogentco.com (154.54.44.141)
+16  289.64 ms be3179.ccr22.sjc01.atlas.cogentco.com (154.54.43.150)
+17  291.21 ms be2095.rcr21.b001848-1.sjc01.atlas.cogentco.com (154.54.3.138)
+18  289.62 ms 38.142.11.154
+19  290.99 ms if-1-4.csw5-fnc1.linode.com (173.230.159.81)
+20  289.20 ms 156.32.33.45.in-addr.arpa (45.33.32.156)
+
+Nmap done: 1 IP address (1 host up) scanned in 16.34 seconds
+hamzaasaad@hamzas-mbp ~ %                                      
